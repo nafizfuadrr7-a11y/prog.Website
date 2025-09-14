@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Programming Lessons</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🚀 Programming Lessons</h1>
+  <p>Learn C, C++, Java & Python with interactive guides</p>
+</header>
+
+<!-- Language Tabs -->
+<input type="radio" name="lang" id="c" checked hidden>
+<input type="radio" name="lang" id="cpp" hidden>
+<input type="radio" name="lang" id="java" hidden>
+<input type="radio" name="lang" id="python" hidden>
+
+<nav>
+  <label for="c">C 💻</label>
+  <label for="cpp">C++ ⚡</label>
+  <label for="java">Java ☕</label>
+  <label for="python">Python 🐍</label>
+</nav>
+
+<div id="tutorial-list">
+  <!-- C Tutorials -->
+  <div class="lang c">
+    <details class="tutorial-item"><summary>📘 Intro</summary><p>Introduction to C language and Hello World.</p>
+      <pre>#include &lt;stdio.h&gt;\nint main(){ printf("Hello C"); }</pre></details>
+    <details class="tutorial-item"><summary>📝 Variables</summary><p>Using int, float, char in C.</p>
+      <pre>int age=20; float pi=3.14;</pre></details>
+    <details class="tutorial-item"><summary>🔁 Loops</summary><p>For, while and do-while.</p>
+      <pre>for(int i=0;i&lt;5;i++){ printf("%d ", i); }</pre></details>
+    <details class="tutorial-item"><summary>🧩 Functions</summary><p>Reusable code blocks.</p>
+      <pre>int add(int a,int b){ return a+b; }</pre></details>
+    <details class="tutorial-item"><summary>📦 Arrays</summary><p>Store multiple values.</p>
+      <pre>int nums[3]={1,2,3};</pre></details>
+    <details class="tutorial-item"><summary>🧑 Structs</summary><p>Group related data.</p>
+      <pre>struct Person { char name[50]; int age; };</pre></details>
+    <details class="tutorial-item"><summary>➡️ Pointers</summary><p>Store memory addresses.</p>
+      <pre>int x=10; int *ptr=&x;</pre></details>
+    <details class="tutorial-item"><summary>💬 Strings</summary><p>Character arrays in C.</p>
+      <pre>char name[]="Hello";</pre></details>
+    <details class="tutorial-item"><summary>📂 File Handling</summary><p>Reading/writing files.</p>
+      <pre>FILE *f=fopen("a.txt","w");</pre></details>
+    <details class="tutorial-item"><summary>⚡ Dynamic Memory</summary><p>malloc, calloc, free.</p>
+      <pre>int *p=malloc(5*sizeof(int));</pre></details>
+  </div>
+
+  <!-- C++ Tutorials -->
+  <div class="lang cpp">
+    <details class="tutorial-item"><summary>📘 Intro</summary><p>Hello World in C++.</p>
+      <pre>#include &lt;iostream&gt;\nusing namespace std; int main(){ cout&lt;&lt;"Hi"; }</pre></details>
+    <details class="tutorial-item"><summary>📝 Variables</summary><p>int, double, string.</p>
+      <pre>int x=5; string s="Hi";</pre></details>
+    <details class="tutorial-item"><summary>🔁 Loops</summary><p>for, while in C++.</p>
+      <pre>for(int i=0;i&lt;3;i++){ cout&lt;&lt;i; }</pre></details>
+    <details class="tutorial-item"><summary>🧩 Functions</summary><p>Define and call.</p>
+      <pre>int sum(int a,int b){ return a+b; }</pre></details>
+    <details class="tutorial-item"><summary>🏛️ Classes</summary><p>Object-oriented basics.</p>
+      <pre>class Person{ public: string n; };</pre></details>
+    <details class="tutorial-item"><summary>🚀 Constructors</summary><p>Auto init objects.</p>
+      <pre>Person(){ cout&lt;&lt;"Created"; }</pre></details>
+    <details class="tutorial-item"><summary>🧬 Inheritance</summary><p>Parent-child classes.</p>
+      <pre>class Dog: public Animal{};</pre></details>
+    <details class="tutorial-item"><summary>🎭 Polymorphism</summary><p>Virtual methods.</p>
+      <pre>virtual void speak(){ }</pre></details>
+    <details class="tutorial-item"><summary>📚 STL</summary><p>Vectors, maps.</p>
+      <pre>vector&lt;int&gt; v={1,2};</pre></details>
+    <details class="tutorial-item"><summary>📂 File Streams</summary><p>fstream read/write.</p>
+      <pre>ofstream out("a.txt");</pre></details>
+  </div>
+
+  <!-- Java Tutorials -->
+  <div class="lang java">
+    <details class="tutorial-item"><summary>📘 Intro</summary><p>Hello World in Java.</p>
+      <pre>public class Main{ public static void main(String[]a){ System.out.println("Hi"); }}</pre></details>
+    <details class="tutorial-item"><summary>📝 Variables</summary><p>Declare variables.</p>
+      <pre>int age=22; double pi=3.14;</pre></details>
+    <details class="tutorial-item"><summary>🔁 Loops</summary><p>for, while loops.</p>
+      <pre>for(int i=0;i&lt;5;i++){ }</pre></details>
+    <details class="tutorial-item"><summary>🧩 Methods</summary><p>Reusable logic.</p>
+      <pre>int add(int a,int b){ return a+b; }</pre></details>
+    <details class="tutorial-item"><summary>🏛️ Classes</summary><p>Blueprints in Java.</p>
+      <pre>class Person{ String n; }</pre></details>
+    <details class="tutorial-item"><summary>👤 Objects</summary><p>Create instances.</p>
+      <pre>Person p=new Person();</pre></details>
+    <details class="tutorial-item"><summary>🧬 Inheritance</summary><p>Extends keyword.</p>
+      <pre>class Dog extends Animal{}</pre></details>
+    <details class="tutorial-item"><summary>📑 Interfaces</summary><p>Define contracts.</p>
+      <pre>interface A{ void run(); }</pre></details>
+    <details class="tutorial-item"><summary>📚 Collections</summary><p>ArrayList, HashMap.</p>
+      <pre>ArrayList&lt;Integer&gt; l=new ArrayList&lt;&gt;();</pre></details>
+    <details class="tutorial-item"><summary>📂 File I/O</summary><p>Read/write files.</p>
+      <pre>FileWriter fw=new FileWriter("a.txt");</pre></details>
+  </div>
+
+  <!-- Python Tutorials -->
+  <div class="lang python">
+    <details class="tutorial-item"><summary>📘 Intro</summary><p>Hello Python!</p>
+      <pre>print("Hello")</pre></details>
+    <details class="tutorial-item"><summary>📝 Variables</summary><p>Dynamic typing.</p>
+      <pre>x=5; y="Hi"</pre></details>
+    <details class="tutorial-item"><summary>🔁 Loops</summary><p>for, while loops.</p>
+      <pre>for i in range(3): print(i)</pre></details>
+    <details class="tutorial-item"><summary>🧩 Functions</summary><p>def keyword.</p>
+      <pre>def add(a,b): return a+b</pre></details>
+    <details class="tutorial-item"><summary>🏛️ Classes</summary><p>OOP basics.</p>
+      <pre>class Person: pass</pre></details>
+    <details class="tutorial-item"><summary>📋 Lists</summary><p>Store collections.</p>
+      <pre>nums=[1,2,3]</pre></details>
+    <details class="tutorial-item"><summary>🔑 Dictionaries</summary><p>Key-value pairs.</p>
+      <pre>d={"a":1,"b":2}</pre></details>
+    <details class="tutorial-item"><summary>📂 File Handling</summary><p>open/read/write.</p>
+      <pre>with open("a.txt","w") as f: f.write("Hi")</pre></details>
+    <details class="tutorial-item"><summary>⚠️ Exceptions</summary><p>Error handling.</p>
+      <pre>try: x=1/0\nexcept: print("Err")</pre></details>
+    <details class="tutorial-item"><summary>📦 Modules</summary><p>Import libraries.</p>
+      <pre>import math; print(math.sqrt(9))</pre></details>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

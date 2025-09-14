@@ -1,0 +1,108 @@
+/* Background Animation */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin:0;
+  padding:0;
+  background: linear-gradient(270deg, #e0f7fa, #fff, #d1f1ff);
+  background-size: 600% 600%;
+  animation: gradientBG 18s ease infinite;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg,#007acc,#00bcd4);
+  color: #fff;
+  text-align: center;
+  padding: 40px 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+}
+header h1 {
+  margin: 0;
+  font-size: 2.8em;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.6);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+header p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff, 0 0 20px #00bcd4; }
+  to { text-shadow: 0 0 20px #fff, 0 0 40px #00e5ff; }
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #005f99;
+  padding: 15px 0;
+}
+nav label {
+  background: #007acc;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 25px;
+  margin: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.1em;
+}
+nav label:hover {
+  background: #004f7a;
+  transform: scale(1.08) rotate(-1deg);
+}
+
+/* Tutorials */
+#tutorial-list {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+.tutorial-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+  margin: 12px 0;
+  padding: 15px 20px;
+  transition: 0.4s ease;
+  overflow: hidden;
+}
+.tutorial-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+details { cursor: pointer; }
+summary {
+  font-size: 1.2em;
+  color: #007acc;
+  font-weight: bold;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+pre {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-top: 10px;
+  font-size: 0.95em;
+  line-height: 1.5em;
+}
+
+/* Language Filter */
+.lang { display: none; }
+#c:checked ~ #tutorial-list .c { display: block; }
+#cpp:checked ~ #tutorial-list .cpp { display: block; }
+#java:checked ~ #tutorial-list .java { display: block; }
+#python:checked ~ #tutorial-list .python { display: block; }
